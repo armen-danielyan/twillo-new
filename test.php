@@ -6,11 +6,11 @@
     $version = date('Y-m-d');
  
     // Set our Account SID and AuthToken
-    $sid = 'ACc428f1701f51ab5b67c3ec1e119418dd';
-    $token = 'd1cdc9fbf87449ec8eff22b58b35e681';
+    $sid   = 'AC6f2b9944225754e4914282b1be9da523';
+    $token = '3d58e80ae1d3c4d7049c238c511b987a';
      
     // A phone number you have previously validated with Twilio
-    $phonenumber = '441363688065';
+    $phonenumber = '+353766805830';
      
     // Instantiate a new Twilio Rest Client
     $client = new Services_Twilio($sid, $token, $version);
