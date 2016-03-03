@@ -1,7 +1,6 @@
 <?php
-    // Include the Twilio PHP library
-    require 'vendor/autoload.php';
-
+// Include the Twilio PHP library
+require 'vendor/autoload.php';
 
 // put your Twilio API credentials here
 $accountSid = 'AC6f2b9944225754e4914282b1be9da523';
@@ -11,7 +10,7 @@ $authToken  = '3d58e80ae1d3c4d7049c238c511b987a';
 //$appSid     = 'AP7917f5802425ff1ed969734af498b698';
 
 $capability = new Services_Twilio_Capability($accountSid, $authToken);
-$capability->allowClientOutgoing('APabe7650f654fc34655fc81ae71caa3ff');
+$capability->allowClientOutgoing('AP7917f5802425ff1ed969734af498b698');
 $token = $capability->generateToken();
 ?>
  
