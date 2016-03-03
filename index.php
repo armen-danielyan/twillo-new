@@ -6,18 +6,15 @@ require 'vendor/autoload.php';
 $accountSid = 'AC6f2b9944225754e4914282b1be9da523';
 $authToken  = '3d58e80ae1d3c4d7049c238c511b987a';
  
-// put your Twilio Application Sid here
-//$appSid     = 'AP7917f5802425ff1ed969734af498b698';
-
 $capability = new Services_Twilio_Capability($accountSid, $authToken);
-$capability->allowClientOutgoing('AP7917f5802425ff1ed969734af498b698');
+$capability->allowClientOutgoing('APabe7650f654fc34655fc81ae71caa3ff');
 $token = $capability->generateToken();
 ?>
  
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello Client Monkey 1</title>
+    <title>Hello Client Monkey 2</title>
     <script type="text/javascript"
       src="//media.twiliocdn.com/sdk/js/client/v1.3/twilio.min.js"></script>
     <script type="text/javascript"
@@ -41,14 +38,26 @@ $token = $capability->generateToken();
         $("#log").text("Successfully established call");
       });
  
+      Twilio.Device.disconnect(function (conn) {
+        $("#log").text("Call ended");
+      });
+ 
       function call() {
         Twilio.Device.connect();
+      }
+ 
+      function hangup() {
+        Twilio.Device.disconnectAll();
       }
     </script>
   </head>
   <body>
     <button class="call" onclick="call();">
       Call
+    </button>
+ 
+    <button class="hangup" onclick="hangup();">
+      Hangup
     </button>
  
     <div id="log">Loading pigeons...</div>
