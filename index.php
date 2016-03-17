@@ -7,7 +7,7 @@
 	class Spreadsheet
 	{
 		const spreadsheet_name = 'MySpreadsheet';
-		const access_token     = "ya29.qAJhUAuZMmpSYXWKv2PPiidv-prkMLvbM8o9Hpbh8-mqyJgymmwEqnDRC7mrmbRASg";
+		const access_token     = "ya29.qAKIhPBaTc5-aLq2GhBmPPe1PHlQP7ztW3ftKzP9YIgjiKcaRbfBFwj8gqeJfRMfGQ";
 
 		private $spreadsheetService,
 				$spreadsheetFeed;
@@ -28,9 +28,9 @@
 				
 				$cellFeed = $worksheet->getCellFeed();
 
-				$cellFeed->editCell(1,1, "AAAA");
-				$cellFeed->editCell(1,2, "BBBB");
-				$cellFeed->editCell(1,3, "CCCC");
+				$cellFeed->editCell(1,1, "DDD");
+				$cellFeed->editCell(1,2, "EEE");
+				$cellFeed->editCell(1,3, "RRR");
 				
 			}catch(\Google\Spreadsheet\Exception $e){
 				echo $e->getMessage();
